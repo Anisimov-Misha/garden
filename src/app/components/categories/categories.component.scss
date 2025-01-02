@@ -1,0 +1,23 @@
+.container{
+    margin: 80px auto;
+}
+.titles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.categories__block-title{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    margin-top: 16px;
+}
+.categories__block{
+    max-width: 316px;
+}
+.categories__img img{
+    width: 316px;
+    height: 350px;
+}

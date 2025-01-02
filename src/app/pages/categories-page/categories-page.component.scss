@@ -1,0 +1,25 @@
+.container{
+    margin: 80px auto;
+}
+.title{
+    margin-bottom: 40px;
+}
+.categories__block-title{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    margin-top: 16px;
+}
+// =====================================
+.categories__block{
+    width: 270px;
+}
+.categories__img img{
+    width: 270px;
+    height: 350px;
+}
+.items__body{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}

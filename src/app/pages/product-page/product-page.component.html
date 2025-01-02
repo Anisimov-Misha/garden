@@ -1,0 +1,35 @@
+@if (product) {
+
+    <app-header></app-header>
+
+    <div class="container">
+        <div class="product-img"><img src="./assets/products/{{ product.imgUrl }}" alt="{{ product.title }}" /></div>
+        <div class="product-block">
+            <div class="title">{{ product.title }}</div>
+            <div class="product-prices">
+                <div class="product-price">${{ product.price * counter }}</div>
+                @if (product.oldPrice > 0) {<div class="product-old-price">${{ product.oldPrice * counter }}</div>}
+                @if (product.discount > 0) {<div class="product-discount">-{{ product.discount }}%</div>}
+            </div>
+            <div class="product-btns">
+                <div class="counter">
+                    <button class="sign" (click)="minusCount()">-</button>
+                    <div class="counter-num">{{ counter }}</div>
+                    <button class="sign" (click)="counter = counter+1">+</button>
+                </div>
+                <button class="btn">Add to cart</button>
+            </div>
+            <div class="product-description-title">Description</div>
+            <div class="product-description">{{ product.description }}</div>
+        </div>
+    </div>
+    
+    <app-contact></app-contact>
+
+} @else {
+    <app-error-page></app-error-page>
+}
+
+
+
+

@@ -1,0 +1,52 @@
+.container {
+    margin: 50px auto;
+}
+.filtr{
+    margin: 40px 0;
+}
+.product-img{
+    position: relative;
+}
+.btn{
+    position: absolute;
+    bottom: 16px;
+    left: 5%;
+    width: 90%;
+    padding: 16px 0;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.product__block{
+    &:hover{
+        .btn{
+            display: flex;
+        }
+    }
+}
+
+.filtr{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.filtr-title{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    color: var(--black-color);
+}
+.filtr-form{
+    display: flex;
+    gap: 16px;
+}
+.filtr-input{
+    width: 112px;
+    padding: 8px 0 8px 16px;
+    border: 1px solid var(--light-gray-color);
+    border-radius: 5px;
+}
+.filtr-check{
+    width: 30px;
+    height: 30px;
+}

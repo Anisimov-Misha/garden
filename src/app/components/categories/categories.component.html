@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="titles">
+        <div class="title">Categories</div>
+        <a href="/categories" class="all-items">All categories</a>
+    </div>
+    <div class="items__body">
+        @for (category of categories; track categories) {
+            <div class="categories__block">
+                <div class="categories__img">
+                    <img src="./assets/categories/{{ category.imgUrl }}" alt="{{ category.title }}">
+                </div>
+                <div class="categories__block-title">{{ category.title }}</div>
+            </div>
+        }
+    </div>
+</div>

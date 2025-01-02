@@ -1,0 +1,29 @@
+.container {
+    margin: 50px auto;
+}
+.title{
+    margin: 30px 0;
+}
+.filtr{
+    margin: 40px 0;
+}
+.product-img{
+    position: relative;
+}
+.btn{
+    position: absolute;
+    bottom: 16px;
+    left: 5%;
+    width: 90%;
+    padding: 16px 0;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.product__block{
+    &:hover{
+        .btn{
+            display: flex;
+        }
+    }
+}

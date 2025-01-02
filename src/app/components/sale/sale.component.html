@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="titles">
+        <div class="title">Sale</div>
+        <a href="/sales" class="all-items">All sales</a>
+    </div>
+    <div class="items__body">
+        @for (sale of saleFromHttpServer; track saleFromHttpServer) {
+            <a href="/product/{{ sale.id }}" class="product__block">
+                <div class="product-img">
+                    <img src="./assets/sale/{{ sale.imgUrl }}" alt="{{ sale.title }}">
+                    <button class="btn">Add to cart</button>
+                </div>
+                <div class="product__block-info">
+                    <div class="product-title">{{ sale.title }}</div>
+                    <div class="product-prices">
+                        <div class="product-price">${{ sale.price }}</div>
+                        <div class="product-old-price">${{ sale.oldPrice }}</div>
+                    </div>
+                </div>
+                <div class="product-discount">-{{ sale.discount }}%</div>
+            </a>
+        }
+    </div>
+</div>

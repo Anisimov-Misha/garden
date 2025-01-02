@@ -1,0 +1,33 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px auto;
+}
+.error-title{
+    color: var(--green-color);
+    font-size: 300px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.error-subtitle{
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 70px;
+}
+.error-text{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    color: var(--gray-color);
+    max-width: 620px;
+    text-align: center;
+}
+.error-btn{
+    padding: 16px 56px;
+}

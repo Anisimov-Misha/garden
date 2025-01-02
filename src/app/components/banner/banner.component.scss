@@ -1,0 +1,28 @@
+.banner__container{
+    position: relative;
+    height: 600px;
+}
+.banner__btn{
+    padding: 16px 56px;
+    margin-top: 40px;
+    display: block;
+    width: fit-content;
+}
+.banner__bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    & img{
+        width: 100%;
+        max-height: 600px;
+    }
+}
+.banner__title{
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 105px;
+    color: var(--white-color);
+    padding-top: 80px;
+}

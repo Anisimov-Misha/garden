@@ -1,0 +1,28 @@
+<app-header></app-header>
+
+<div class="container">
+    <div class="title">All Sales !!!</div>
+
+    <div class="items__body">
+        @for (product of products; track products) {
+            @if (product.discount > 0) {
+                <div class="product__block">
+                    <div class="product-img">
+                        <img src="./assets/products/{{ product.imgUrl }}" alt="{{ product.title }}">
+                        <a href="/product/{{ product.id }}" class="btn">Add to cart</a>
+                    </div>
+                    <a href="/product/{{ product.id }}" class="product__block-info">
+                        <div class="product-title">{{ product.title }}</div>
+                        <div class="product-prices">
+                            <div class="product-price">${{ product.price }}</div>
+                            @if (product.oldPrice > 0) {<div class="product-old-price">${{ product.oldPrice }}</div>}
+                        </div>
+                    </a>
+                    @if (product.discount > 0) {<div class="product-discount">-{{ product.discount }}%</div>}
+                </div>
+            }
+        }
+    </div>
+</div>
+
+<app-contact></app-contact>

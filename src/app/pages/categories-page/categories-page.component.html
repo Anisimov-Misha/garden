@@ -1,0 +1,19 @@
+<app-header></app-header>
+
+
+<div class="container">
+    <div class="title">Categories</div>
+    <div class="items__body">
+        @for (category of categories; track categories) {
+            <div class="categories__block">
+                <div class="categories__img">
+                    <img src="./assets/categories/{{ category.imgUrl }}" alt="{{ category.title }}">
+                </div>
+                <div class="categories__block-title">{{ category.title }}</div>
+            </div>
+        }
+    </div>
+</div>
+
+
+<app-contact></app-contact>

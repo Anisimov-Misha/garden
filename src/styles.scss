@@ -1,0 +1,142 @@
+@import 'null';
+@import 'margins';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --black-color: #282828;
+    --white-color: #FFFFFF;
+    --gray-color: #8B8B8B;
+    --light-gray-color: #DDDDDD;
+    --green-color: #339933;
+}
+body {
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 14px;
+}
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.btn {
+    background-color: var(--green-color);
+    color: var(--white-color);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    &:hover{
+        background-color: var(--black-color);
+    }
+}
+.title{
+    color: var(--black-color);
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 70px;
+}
+.all-items{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    padding: 8px 16px;
+    color: var(--gray-color);
+    border: 1px solid var(--gray-color);
+    border-radius: 10px;
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        left: -900px;
+        top: 50%;
+        width: 900px;
+        height: 1px;
+        background-color: var(--gray-color);
+        @media (max-width: 1400px) {
+            width: 700px;
+            left: -700px;
+        }
+        @media (max-width: 1000px) {
+            width: 500px;
+            left: -500px;
+        }
+        @media (max-width: 600px) {
+            width: 300px;
+            left: -300px;
+        }
+    }
+}
+.items__body{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    
+}
+
+// PRODUCTS --------------------------------
+.product-img{
+    border-bottom: 1px solid var(--light-gray-color);
+    & img{
+        width: 100%;
+    }
+}
+.product__block{
+    border-radius: 10px;
+    outline: 1px solid var(--light-gray-color);
+    position: relative;
+}
+.product__block-info{
+    padding: 20px 32px 32px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s ease;
+    &:hover{
+        background-color: var(--light-gray-color);
+    }
+}
+.product-title{
+    color: var(--black-color);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+    margin-bottom: 16px;
+    text-overflow: ellipsis; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    width: 255px;
+}
+.product-prices{
+    display: flex;
+    align-items: end;
+    gap: 16px;
+}
+.product-price{
+    color: var(--black-color);
+    font-size: 40px;
+    line-height: 44px;
+    font-weight: 600;
+}
+.product-old-price{
+    color: var(--gray-color);
+    text-decoration: line-through;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.product-discount {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    padding: 4px 8px;
+    color: var(--white-color);
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 600;
+    letter-spacing: 3%;
+    background-color: var(--green-color);
+    border-radius: 10px;
+}
+// --------------------------------------       
